@@ -1,4 +1,4 @@
-# Add these lines to .gitignore
+# Clean up your .gitignore file
 cat > .gitignore << 'EOF'
 # Virtual Environment
 venv/
