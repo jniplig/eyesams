@@ -1,13 +1,18 @@
 # EyeSAMS - Excel Processing Tool
 
-A Python tool for merging multiple Excel files with multiple worksheets into a consolidated dataset with comprehensive error handling and logging.
+A python tool for merging sets exported from iSAMS. 
+The excel file that iSAMS creates when exporting multiple sets contains a separate worksheet for each set.
+This tool was created to quickly consolildate a set export into an Excel workbook with all worksheets consolidated into one.
+The name of the set is taken from the name of the worksheet and the name of the teacher assigned to the set is parsed from the first row in each worksheet.
+The first iteration of this tool was built to be used with Google Colab and Google Drive.
+Files for consolidation are put into a directory on Google Drive and the script is run from Google Colab.
 
 ## Features
 
 - ✅ **Multi-file Processing**: Handles multiple Excel files in a directory
 - ✅ **Multi-sheet Support**: Processes all worksheets within each file
 - ✅ **Data Validation**: Checks for empty sheets, insufficient data, corrupted files
-- ✅ **Metadata Extraction**: Extracts teacher codes and worksheet names
+- ✅ **Metadata Extraction**: Extracts teacher codes and worksheet names and sets them as columns
 - ✅ **Error Handling**: Comprehensive error catching with detailed reporting
 - ✅ **Progress Tracking**: Real-time processing feedback and final statistics
 - ✅ **Version Control**: Automatic output file versioning to prevent overwrites
@@ -65,7 +70,7 @@ python src/excel_processor.py
 
 ## File Structure Requirements
 
-Your Excel files should follow this structure:
+The iSAMS set export file has the following format:
 - **Row 1**: Teacher information (last 5 characters will be extracted)
 - **Row 2**: Column headers
 - **Rows 3-N**: Data rows
@@ -160,7 +165,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Author
 
-Your Name - [your.email@example.com](mailto:your.email@example.com)
+Jeremy Gilpin - [jniplig@gmail.com](mailto:jniplig@gmail.com)
 
 ## Acknowledgments
 
